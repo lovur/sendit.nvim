@@ -18,8 +18,3 @@ let g:loaded_exampleplugin = 1
 " Lua modules from the plugin's dependency directory.
 let s:lua_rocks_deps_loc =  expand("<sfile>:h:r") . "/../lua/sendit/deps"
 exe "lua package.path = package.path .. ';" . s:lua_rocks_deps_loc . "/lua-?/init.lua'"
-
-" Exposes the plugin's functions for use as commands in Neovim.
-command! -nargs=0 FetchTodos lua require("sendit").fetch_todos()
-command! -nargs=0 InsertTodo lua require("sendit").insert_todo()
-command! -nargs=0 CompleteTodo lua require("sendit").complete_todo()
